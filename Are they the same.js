@@ -18,3 +18,16 @@ function comp(array1, array2){
   }
 
 }
+
+
+//wanted to try using map and works much cleaner
+
+function comp(array1, array2){
+  if(array1 === [] || array2 === [] || array1 === null || array2 === null){
+    return false
+  } else {
+  let arr = array2.map(i => Math.sqrt(i))
+  return arr.sort().every((val, index) => val === array1.sort()[index])
+  }
+
+}
